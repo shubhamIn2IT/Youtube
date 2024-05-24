@@ -1,0 +1,123 @@
+.container .main .sideBar .accordion .accordian_heading, .container .header .right_header, .container .header .middle_header .field .input_field_div, .container .header .middle_header .field, .container .header .left_header, .container .header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  border: 0px solid green;
+  padding: 0;
+  color: red;
+}
+.container .header {
+  width: 100vw;
+  height: 70px;
+  background-color: black;
+  border: 0px solid green;
+  padding: 25px;
+  color: white;
+  border-bottom: 1px solid rgb(56, 56, 56);
+}
+.container .header .left_header {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.container .header .middle_header {
+  flex-grow: 1;
+  background-color: black;
+  border: 0 solid;
+  padding: 16px;
+  color: white;
+}
+.container .header .middle_header .field {
+  flex-grow: 1;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  background-color: black;
+  border: 0 solid;
+  padding: 30px;
+  color: white;
+}
+.container .header .middle_header .field .input_field_div input {
+  width: 40vw;
+  height: 40px;
+  background-color: black;
+  border: 2px solid rgb(56, 56, 56);
+  padding: 24px;
+  color: white;
+  flex-grow: 1;
+  border-radius: 20px;
+  outline: none;
+  padding-left: 30px;
+  background-image: url("https://cdn-icons-png.flaticon.com/128/11741/11741045.png");
+  background-size: 20px 20px;
+  background-position: 5px center;
+  background-repeat: no-repeat;
+}
+.container .header .right_header {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.container .header .right_header:first-child {
+  font-weight: bold;
+}
+.container .main {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 70px);
+  background-color: rgb(31, 29, 29);
+  border: 0px solid red;
+  padding: 0;
+  color: white;
+}
+.container .main .sideBar {
+  width: 15vw;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: rgb(31, 29, 29);
+  border: 0px solid rgb(228, 75, 75);
+  padding: 0;
+  color: white;
+  border: 1px solid rgb(54, 54, 54);
+}
+.container .main .sideBar .accordion {
+  width: 100%;
+  height: auto;
+  display: flex;
+  border-bottom: 1px solid rgb(54, 54, 54);
+  flex-direction: column;
+}
+.container .main .sideBar .accordion .accordian_heading {
+  width: 100%;
+  height: 40px;
+  background-color: red;
+  padding: 10px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.container .main .sideBar .accordion .accordian_heading .accordian_logo {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.container .main .sideBar .accordion .accordian_body {
+  width: 100%;
+  height: 0;
+  background-color: rgb(230, 159, 159);
+}/*# sourceMappingURL=main.css.map */

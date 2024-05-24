@@ -1,0 +1,6 @@
+@media (max-width: 748px) {
+  .container .main .sideBar {
+    background-color: green;
+    width: 3vw;
+  }
+}/*# sourceMappingURL=MediaQuery.css.map */

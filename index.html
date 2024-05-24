@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCSS</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="./Responsive/MediaQuery.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <header class="header">
+      <div class="left_header">
+        <div class="toggle"><img width="20px" src="https://cdn-icons-png.flaticon.com/128/7711/7711100.png" alt="">
+        </div>
+        <div class="logo"><img width="30px" src="https://cdn-icons-png.flaticon.com/128/4762/4762311.png" alt=""></div>
+      </div>
+
+      <div class="middle_header">
+        <div class="field">
+          <div class="input_field_div">
+            <input type="text" placeholder=" Enter Text">
+            <div>
+              <img width="40px" style="margin: 6px;" src="https://cdn-icons-png.flaticon.com/128/10934/10934762.png"
+                alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="right_header">
+        <div class="user_name">Stonny</div>
+        <div class="user_logo">
+          <img width="40px" src="https://cdn-icons-png.flaticon.com/128/1144/1144709.png" alt="">
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="sideBar">
+
+        <div class="accordion">
+          <div id="head1" onclick="toggle(id,'accordian_body1','c1')"  value="of" class="accordian_heading false">
+             <div class="accordian_logo">
+                <div>😍</div>
+                <div>Course</div>
+             </div>
+             <div id="c1">〉</div>
+          </div>
+
+          <div id="accordian_body1" class="accordian_body">
+            <ul>
+              <li>list-1</li>
+              <li>list-2</li>
+              <li>list-3</li>
+              <li>list-4</li>
+              <li>list-5</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion">
+
+          <div id="head2" onclick="toggle(id,'accordian_body2','c2')"  value="of" class="accordian_heading false">
+             <div>Course</div>
+             <div id="c2">〉</div>
+          </div>
+
+          <div id="accordian_body2" class="accordian_body">
+            <ul>
+              <li>list-1</li>
+              <li>list-2</li>
+              <li>list-3</li>
+              <li>list-4</li>
+              <li>list-5</li>
+            </ul>
+          </div>
+        </div>
+
+
+
+        
+
+      </div>
+      <div class="body">Body</div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

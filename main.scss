@@ -1,0 +1,129 @@
+@import './Scss/var';
+@import './Scss/mixing';
+
+%flexRow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+%flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden
+}
+
+@function calculate($height) {
+    @return calc(100vh - $height);
+}
+
+.container {
+    @include setDimension(100vw, 100vh);
+    @include setElementsProperties($container_bg, 0px, green, 0, red);
+    @extend %flexColumn;
+
+    .header {
+        @include setDimension(100vw, 70px);
+        @include setElementsProperties($header_bg, 0px, green, 25px, white);
+        border-bottom: 1px solid rgb(56, 56, 56);
+        @extend %flexRow;
+
+        .left_header {
+            @extend %flexRow;
+            column-gap: 20px;
+        }
+
+        .middle_header {
+            flex-grow: 1;
+            @include setElementsProperties(black, 0, null, 16px, white);
+
+            .field {
+                flex-grow: 1;
+                @extend %flexRow;
+                column-gap: 20px;
+                @include setElementsProperties(black, 0, null, 30px, white);
+
+                .input_field_div {
+                    @extend %flexRow;
+
+                    input {
+                        @include setDimension(40vw, 40px);
+                        @include setElementsProperties(black, 2px, rgb(56, 56, 56), 24px, white);
+
+                        flex-grow: 1;
+                        border-radius: 20px;
+                        outline: none;
+                        padding-left: 30px;
+                        background-image: url('https://cdn-icons-png.flaticon.com/128/11741/11741045.png');
+                        background-size: 20px 20px;
+                        background-position: 5px center;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+
+        }
+
+        .right_header {
+            @extend %flexRow;
+            column-gap: 20px;
+
+            &:first-child {
+                font-weight: bold;
+            }
+        }
+
+    }
+
+    .main {
+        display: flex;
+        @include setDimension(100vw, calculate(70px));
+
+        @include setElementsProperties(rgb(31, 29, 29), 0px, red, 0, white);
+
+        .sideBar {
+            @include setDimension($sideBarWidth, 100vh);
+            overflow-y: auto;
+            @include setElementsProperties(rgb(31, 29, 29), 0px, rgb(228, 75, 75), 0, white);
+            border: 1px solid rgb(54, 54, 54);
+
+            .accordion {
+                @include setDimension(100%, auto);
+                display: flex;
+                // padding: 10px;
+                border-bottom: 1px solid rgb(54, 54, 54);;
+                flex-direction: column;
+                
+                .accordian_heading {
+                    @include setDimension(100%, 40px);
+                    @include setBg(red);
+                    padding: 10px;                  
+                    @extend %flexRow;                 
+                    justify-content: space-between;
+                    cursor: pointer;
+
+                    .accordian_logo{
+                        display: flex;
+                        column-gap: 10px
+                        
+                    }
+                }
+
+                .accordian_body{
+                    // display: none;
+                    @include setDimension(100%, 0);                 
+                    @include setBg(rgb(230, 159, 159));            
+                }
+
+            }
+
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@mixin setElementsProperties($bg: #ff00ff, $border: 0px, $borderColor: yellow, $padding:0, $textColor:white) {
+  
+    background-color: $bg;
+    border: $border solid $borderColor;
+    padding: $padding;
+    color: $textColor;
+}
+
+@mixin setDimension($width: 100vw, $height: 100vh){
+   width: $width;
+   height: $height;
+}
+
+@mixin setBg($bg){
+    background-color: $bg;
+}
